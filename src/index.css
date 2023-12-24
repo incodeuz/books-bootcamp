@@ -25,3 +25,18 @@
 .active {
   border-bottom: 3px solid #c9ac8c;
 }
+
+.ant-dropdown-menu-item:last-child:hover {
+  background-color: rgb(246, 130, 130) !important;
+  color: white !important;
+}
+
+.ant-btn-primary {
+  background-color: #c9ac8c !important;
+}
+
+.ant-btn {
+  padding: 7px 16px !important;
+  width: fit-content !important;
+  height: fit-content !important;
+}
