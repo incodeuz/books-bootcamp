@@ -11,10 +11,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const confirm = (e: any) => {
+  const confirm = async () => {
     localStorage.clear();
-    window.location.reload();
     message.info("Siz tizimdan chiqdingiz!");
+    setTimeout(() => {
+      window.location.reload();
+    }, 2000);
   };
 
   const items: MenuProps["items"] = [

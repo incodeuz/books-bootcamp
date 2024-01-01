@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useUsersApi from "../../../service/api/users";
 import { useDispatch, useSelector } from "react-redux";
 import { endLoading, startLoading } from "../../../store/loader";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 type FieldType = {
   password?: string;
@@ -56,7 +57,13 @@ const SignIn = () => {
       </div>
       <div className="flex-1 h-full w-[50%] flex items-center justify-center">
         <div className="flex flex-col w-full m-auto mt-auto mb-auto max-w-[350px]">
-          <h1 className="text-[36px] font-bold mb-[10px]">Kirish</h1>
+          <div
+            onClick={() => navigate("/")}
+            className="w-fit px-1 rounded-md hover:bg-gray-200 cursor-pointer mb-[50px]"
+          >
+            <ArrowLeftOutlined />
+          </div>
+          <h1 className="text-[36px] font-bold mb-[10px] select-none">Kirish</h1>
           <p className="p-0 text-[14px] font-normal mb-[30px]">
             Akkauntingiz yoqmi?{" "}
             <Link className="text-[#549FF9] underline" to={"/sign-up"}>
