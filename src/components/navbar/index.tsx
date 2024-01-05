@@ -6,12 +6,11 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Avatar, Button, Dropdown, Popconfirm, message } from "antd";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import lng from "../../assets/icons/lng.svg";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
 
   const confirm = async () => {
     localStorage.clear();

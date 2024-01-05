@@ -1,14 +1,6 @@
-import { useState } from "react";
 import { Modal, Segmented, Switch } from "antd";
 
 const ModalUI = () => {
-  //   const handleOk = () => {
-  //     setIsModalOpen(false);
-  //   };
-
-  //   const handleCancel = () => {
-  //     setIsModalOpen(false);
-  //   };
   return (
     <div>
       <Modal
