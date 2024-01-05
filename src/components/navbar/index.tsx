@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  DownOutlined,
-  UserOutlined,
-  LogoutOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
+import { DownOutlined, UserOutlined, LogoutOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import {
   Avatar,
@@ -19,7 +14,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import lng from "../../assets/icons/lng.svg";
 import moonIcon from "../../assets/icons/moon.svg";
 import sunIcon from "../../assets/icons/sun.svg";
-import i18next, { changeLanguage } from "i18next";
+import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
