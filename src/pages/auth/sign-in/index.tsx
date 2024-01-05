@@ -34,7 +34,7 @@ const SignIn = () => {
           localStorage.setItem("first_name", data?.data?.user?.first_name);
           localStorage.setItem("last_name", data?.data?.user?.last_name);
           localStorage.setItem("id", data?.data?.user?.id);
-          return navigate("/");
+          return localStorage.getItem("id") && navigate("/");
         }
         console.log(data);
       })
@@ -63,7 +63,9 @@ const SignIn = () => {
           >
             <ArrowLeftOutlined />
           </div>
-          <h1 className="text-[36px] font-bold mb-[10px] select-none">Kirish</h1>
+          <h1 className="text-[36px] font-bold mb-[10px] select-none">
+            Kirish
+          </h1>
           <p className="p-0 text-[14px] font-normal mb-[30px]">
             Akkauntingiz yoqmi?{" "}
             <Link className="text-[#549FF9] underline" to={"/sign-up"}>

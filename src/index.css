@@ -52,3 +52,11 @@
   padding-left: 86px;
   padding-bottom: 65px;
 }
+
+.ant-switch-inner-unchecked {
+  background-color: #8c8c8c !important;
+}
+
+.ant-switch-inner-checked {
+  background-color: red !important;
+}
