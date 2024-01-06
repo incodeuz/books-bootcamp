@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CarouselUI from "../../components/carousel";
 import SearchBox from "../../components/search-box";
 import Tabs from "../../components/tabs";
