@@ -52,7 +52,7 @@ const Tabs = () => {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="flex items-start flex-wrap justify-center gap-[40px]">
         {tabs
           .find((category: any) => category?.name === activeTab)
           ?.book?.map((kitob: any, index: number) => (
@@ -64,6 +64,7 @@ const Tabs = () => {
               pages={kitob?.pages}
               description={kitob?.description}
               year={kitob?.year}
+              id={kitob?.id}
               name={`${kitob?.author?.first_name} ${kitob?.author?.last_name}`}
             />
           ))}

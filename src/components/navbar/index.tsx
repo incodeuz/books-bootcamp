@@ -159,34 +159,26 @@ const Navbar = () => {
               alt=""
             />
           )}
-          {localStorage.getItem("token") ? (
-            <div>
-              <Dropdown
-                menu={{ items }}
-                trigger={["click"]}
-                className="cursor-pointer"
-              >
-                <div className="flex items-center gap-[4px]">
-                  <Avatar
-                    style={{
-                      backgroundColor:
-                        localStorage.getItem("avatar_theme") || "black",
-                    }}
-                    size="large"
-                    icon={localStorage.getItem("first_name")?.slice(0, 1)}
-                  />
-                  <DownOutlined />
-                </div>
-              </Dropdown>
-            </div>
-          ) : (
-            <div className="flex items-center gap-[10px]">
-              <Button onClick={() => navigate("sign-in")}>Kirish</Button>
-              <Button onClick={() => navigate("sign-up")} type="primary">
-                Registratsiya
-              </Button>
-            </div>
-          )}
+
+          <div>
+            <Dropdown
+              menu={{ items }}
+              trigger={["click"]}
+              className="cursor-pointer"
+            >
+              <div className="flex items-center gap-[4px]">
+                <Avatar
+                  style={{
+                    backgroundColor:
+                      localStorage.getItem("avatar_theme") || "black",
+                  }}
+                  size="large"
+                  icon={localStorage.getItem("first_name")?.slice(0, 1)}
+                />
+                <DownOutlined />
+              </div>
+            </Dropdown>
+          </div>
         </div>
       </div>
     </>

@@ -1,7 +1,9 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
 
 const Layout = () => {
+  if (!localStorage.getItem("token")) return <Navigate to={"/sign-in"} />;
+
   return (
     <div>
       <header>

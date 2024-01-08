@@ -1,19 +1,25 @@
+import { useNavigate } from "react-router-dom";
 import pagesIcon from "../../assets/icons/pages.svg";
 import priceIcon from "../../assets/icons/price.svg";
 
 interface BookCardProps {
   book_cover?: string;
-  title?: string;
+  title?: any;
   description?: string;
   pages?: string;
   price?: string;
   year?: string;
   name?: string;
+  id?: any;
 }
 
 const BookCard = (props: BookCardProps) => {
+  const navigate = useNavigate();
   return (
-    <div className="w-[170px] h-[240px]">
+    <div
+      onClick={() => navigate(`/book-details/${props?.id}`)}
+      className="w-[200px] shadow-sm hover:shadow-md p-[12px] rounded-lg overflow-hidden cursor-pointer"
+    >
       <div className="w-full object-cover rounded-lg overflow-hidden">
         {props?.book_cover?.length ? (
           <img
@@ -30,9 +36,12 @@ const BookCard = (props: BookCardProps) => {
         )}
       </div>
 
-      <h1 className="font-rotterburg text-[#C9AC8C] text-[20px] w-full break-words">
-        {props?.title}
+      <h1 className="font-crimson text-[#C9AC8C] text-[22px] w-full break-words">
+        {props?.title?.length > 15
+          ? props?.title?.slice(0, 15) + "..."
+          : props?.title}
       </h1>
+
       <article className="text-[rgba(33,33,33,0.6)] font-crimson text-[18px]">
         {props?.name}
       </article>
