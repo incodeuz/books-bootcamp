@@ -6,16 +6,20 @@ const Tabs = () => {
   const [tabs, setTabs]: any = useState([]);
   const [activeTab, setActiveTab]: any = useState();
   const { getAllCategories } = useCategoriesApi();
+
   useEffect(() => {
     getAllCategories().then((res) => {
       setTabs(res.data);
       setActiveTab(res.data?.[0].name);
     });
   }, []);
-  console.log(tabs);
+
   return (
-    <div className="mb-[100px] pb-[100px]">
-      <div className="mt-[150px] flex items-center justify-center">
+    <div className="pb-[50px]">
+      <h1 className="text-[30px] font-rotterburg text-[#c9ac8c] text-center my-[30px]">
+        Asosiy kategoriyalar
+      </h1>
+      <div className="flex items-center justify-center">
         <div className="mb-4">
           <ul
             className="flex flex-wrap -mb-px text-sm font-medium text-center"

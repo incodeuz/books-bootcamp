@@ -47,11 +47,6 @@
   background-position: center;
   background-size: contain;
 }
-:where(.css-dev-only-do-not-override-v5v2fc).ant-carousel .slick-dots {
-  justify-content: start !important;
-  padding-left: 86px;
-  padding-bottom: 65px;
-}
 
 .ant-switch-inner-unchecked {
   background-color: #8c8c8c !important;
