@@ -8,6 +8,7 @@ import SignIn from "../pages/auth/sign-in";
 import SignUp from "../pages/auth/sign-up";
 import GenericComp from "../components/generic";
 import Authors from "../pages/authors";
+import Books from "../pages/books";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/books",
-        element: <GenericComp />,
+        element: <Books />,
       },
       {
         path: "/maqolalar",
